@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper flex justify-between align-center">
+                <ul class="header__nav flex h6 font-600">
+                    <li>
+                        <a class="primary-color" href="#catalog">Каталог</a>
+                    </li>
+                    <li>
+                        <a class="primary-color" href="#promotions">Акции</a>
+                    </li>
+                    <li>
+                        <a class="primary-color" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+                <div class="header__logo">
+                    <a href="index.html" class="header__logo--title h5 font-600 primary-color">
+                        <span>Металломаркет "Щелковский"</span>
+                    </a>
+                </div>
+                <ul class="header__contacts flex">
+                    <li>
+                        <a href="https://t.me/" target="blank" rel="noopener noreferrer">
+                            <span>
+                                <img class="header-contacts--icon" src="images/telegram_icon.svg" alt="" loading />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=1234567890" target="blank"
+                            rel="noopener noreferrer">
+                            <span>
+                                <img class="header-contacts--icon" src="images/whatsapp_icon.svg" alt="" loading />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+30(000)0000000" target="blank" rel="noopener noreferrer">
+                            <span>
+                                <img class="header-contacts--icon" src=" images/phone_icon.svg" alt="" loading />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Proposition -->
+        <section class="proposition">
+            <div class="container">
+                <div class="proposition__wrapper flex justify-between align-center">
+                    <div class="proposition__content flex">
+                        <p class="proposition__title h2 font-700"> Уникальное торговое предложение </p>
+                        <div class="proposition__img--mobile">
+                            <img class="proposition__img" src="images/proposition.png" alt="" loading />
+                        </div>
+                        <button class="btn btn--color btn--proposition">Предзаказ</button>
+                    </div>
+                    <div class="proposition__img--full">
+                        <img class="proposition__img" src="images/proposition.png" alt="" loading />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section class="advantages">
+            <div class="container">
+                <ul class="advantages__list flex flex-wrap justify-between">
+                    <li class="advantages__item">
+                        <div>
+                            <img class="advantages__img" src="images/advantages1.jpg" alt="" loading />
+                        </div>
+                        <p class="h4 font-700 text-center clamped">Преимущество 1</p>
+                    </li>
+                    <li class="advantages__item">
+                        <div>
+                            <img class="advantages__img" src="images/advantages2.jpg" alt="" loading />
+                        </div>
+                        <p class="h4  font-700 text-center clamped">Преимущество 2</p>
+                    </li>
+                    <li class="advantages__item">
+                        <div>
+                            <img class="advantages__img" src="images/advantages3.jpg" alt="" loading />
+                        </div>
+                        <p class="h4  font-700 text-center clamped">Преимущество 3</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Uses -->
+        <section class="uses">
+            <p class="section__title h2 font-800 text-center">Идеально подойдет для</p>
+            <ul class="uses__list flex justify-between">
+                <li class="uses__item uses__shadow uses__zoom--img">
+                    <div>
+                        <img class="uses__img zoomable-img" src="images/uses1.jpeg" alt="" loading />
+                    </div>
+                    <div class="uses__content">
+                        <p class="uses__subtitle h5 font-600 primary-color">Применение 1</p>
+                        <p class="primary-color">Описание применения</p>
+                    </div>
+                </li>
+                <li class="uses__item">
+                    <ul class="uses__sublist flex flex-wrap">
+                        <li class="uses__subitem uses__shadow uses__zoom--img">
+                            <div>
+                                <img class="uses__subimg zoomable-img" src="images/uses2.jpeg" alt="" loading />
+                            </div>
+                            <div class="uses__content">
+                                <p class="uses__subtitle h5 font-600 primary-color">Применение 2</p>
+                                <p class="primary-color">Описание применения</p>
+                            </div>
+                        </li>
+                        <li class="uses__subitem uses__shadow uses__zoom--img">
+                            <div>
+                                <img class="uses__subimg zoomable-img" src="images/uses3.png" alt="" loading />
+                            </div>
+                            <div class="uses__content">
+                                <p class="uses__subtitle h5 font-600 primary-color">Применение 3</p>
+                                <p class="primary-color">Описание применения</p>
+                            </div>
+                        </li>
+                        <li class="uses__subitem uses__shadow uses__zoom--img">
+                            <div>
+                                <img class="uses__subimg zoomable-img" src="images/uses4.png" alt="" loading />
+                            </div>
+                            <div class="uses__content">
+                                <p class="uses__subtitle h5 font-600 primary-color">Применение 4</p>
+                                <p class="primary-color">Описание применения</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Promotions -->
+        <section class="promotions" id="promotions">
+            <div class="container">
+                <p class="section__title h2 font-800 text-center">Актуальные акции</p>
+                <ul class="promotions__list flex flex-wrap justify-between">
+                    <li class="promotions__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="promotions__img" src="images/advantages1.jpg" alt="" loading />
+                            </span>
+                            <span class="promotions__content">
+                                <div>
+                                    <span class="promotions__title h6 font-700 clamped">Заголовок акции 1</span>
+                                    <span class="promotions__subtitle h6 font-400 clamped">Описание акции</span>
+                                </div>
+                                <button class="btn btn--color btn--promotions btn--promotions--display font-600">Узнать
+                                    подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="promotions__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="promotions__img" src="images/advantages2.jpg" alt="" loading />
+                            </span>
+                            <span class="promotions__content">
+                                <div>
+                                    <span class="promotions__title h6 font-700 clamped">Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Repellat laborum similique inventore
+                                        necessitatibus minima explicabo delectus cum quod. Corporis, aspernatur.
+                                        Veritatis praesentium quidem ipsa repudiandae magnam nisi accusamus sequi
+                                        numquam.</span>
+                                    <span class="promotions__subtitle h6 font-400 clamped">Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Culpa adipisci laudantium nam earum iure sequi
+                                        eligendi amet facilis molestias dignissimos esse voluptate expedita obcaecati,
+                                        est vero sapiente libero explicabo illo! Описание акции</span>
+                                </div>
+                                <button class="btn btn--color btn--promotions btn--promotions--display font-600">Узнать
+                                    подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="promotions__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="promotions__img" src="images/advantages3.jpg" alt="" loading />
+                            </span>
+                            <span class="promotions__content">
+                                <div>
+                                    <span class="promotions__title h6  font-700 clamped">Заголовок акции 3</span>
+                                    <span class="promotions__subtitle h6 font-400 clamped">Описание акции</span>
+                                </div>
+                                <button class="btn btn--color btn--promotions btn--promotions--display font-600">Узнать
+                                    подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn btn--color btn--promotions font-600">Узнать подробнее</button>
+            </div>
+        </section>
+
+        <!-- Catalog -->
+        <section class="catalog" id="catalog">
+            <div class="container">
+            </div>
+        </section>
+
+        <!-- Form #1 -->
+        <section class="form1">
+            <div class="container">
+            </div>
+        </section>
+
+        <!-- Questions -->
+        <section class="questions">
+            <div class="container">
+            </div>
+        </section>
+
+        <!-- Form #2 -->
+        <section class="form2">
+            <div class="container">
+            </div>
+        </section>
+
+        <!--  Be interested -->
+        <section class=" beInterested">
+            <div class="container">
+            </div>
+        </section>
+
+        <!-- Contacts -->
+        <section class="contacts" id="contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__card flex">
+                    <div>
+                        <a href="index.html" class="contacts__title font-600 primary-color">
+                            <span>Наименование продавца</span>
+                        </a>
+                    </div>
+                    <p class="contacts__subtitle font-300 primary-color">Время работы: день недели, часы</p>
+                    <div class="contacts__action">
+                        <a class="contacts__action font-300  primary-color" href="tel:+30(000)000000" target="blank"
+                            rel="noopener noreferrer">Номер телефона</a>
+                        <a class="contacts__action font-300  primary-color" href="mailto:contact@contact.ru"
+                            target="blank" rel="noopener noreferrer">Электронная почта</a>
+                        <a class="contacts__action font-300  primary-color"
+                            href="https://www.google.com.ua/maps/place/%D1%80-%D0%BD+%D0%9A%D1%83%D0%BD%D1%86%D0%B5%D0%B2%D0%BE,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F/@55.7698139,37.3007453,12z/data=!3m1!4b1!4m6!3m5!1s0x46b545fca69795c7:0x9719ee4d2a3ddc6c!8m2!3d55.733876!4d37.4057466!16s%2Fm%2F05c3d0l?hl=ru&entry=ttu"
+                            target="_blank" rel="noopener noreferrer">Адрес
+                        </a>
+                    </div>
+                    <ul class="contacts__socialList flex">
+                        <li>
+                            <a href="https://twitter.com/" target="blank" rel="noopener noreferrer">
+                                <span>
+                                    <img class="contacts--icon" src="images/contacts_twitter.svg" alt="" loading />
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://m.vk.com/" target="blank" rel="noopener noreferrer">
+                                <span>
+                                    <img class="contacts--icon" src="images/contacts_vk.svg" alt="" loading />
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://telegram.org/" target="blank" rel="noopener noreferrer">
+                                <span>
+                                    <img class="contacts--icon" src=" images/contacts_telegram.svg" alt="" loading />
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71819.16119157194!2d37.30074534345605!3d55.76981394293387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b545fca69795c7%3A0x9719ee4d2a3ddc6c!2z0YAt0L0g0JrRg9C90YbQtdCy0L4sINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2sua!4v1687953779794!5m2!1sru!2sua"
+                    width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__wrapper flex justify-between align-center">
+            <p class="footer__content h6 font-600 primary-color"> © 2023 Наименование продавца</p>
+            <button class="btn btn--toTop font-600 primary-color"> Наверх &#8593 </button>
+        </div>
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
