@@ -6,6 +6,7 @@
     --primary-color: #fff;
     --secondary-color: #000;
     --accent-color: #e03a3a;
+    --secondary-accent-color: #dedede;
 }
 
 .container {
@@ -252,25 +253,120 @@ a:hover,
     padding: 6rem 0;
 }
 
-/* Form1 */
+/* Form */
 .form1 {
     padding: 6rem 0;
 }
+
+.form2 {
+    padding: 8rem 0;
+}
+
+.form__wrapper {
+    position: relative;
+    background-color: var(--secondary-accent-color);
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.form__action {
+    padding: 4rem 4rem 7rem;
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: 55%;
+    z-index: 1000;
+}
+
+.form__input {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    font-family: 'CirceRounded', Arial, sans-serif;
+    height: 5rem;
+    border: 0.1rem solid rgb(245, 245, 245);
+    border-radius: 1rem;
+}
+
+.form__title {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.form1__image {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form1__img {
+    transform: rotate(180deg);
+    max-width: 100%;
+    max-height: 390px;
+}
+
+.form2__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 57rem;
+    max-height: 42rem;
+}
+
+.btn--form {
+    width: 20rem;
+}
+
 
 /* Questions */
 .questions {
     padding: 4.5rem 0;
 }
 
-/* Form2 */
-.form2 {
-    padding: 8rem 0;
-}
-
 /* BeInterested */
 .beInterested {
     padding: 3rem 0;
-    ;
+    font-family: 'Noto Sans', Arial, sans-serif;
+}
+
+.beInterested__list {
+    align-items: flex-end;
+    margin-bottom: 5rem;
+    gap: 6rem;
+}
+
+.beInterested__item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(33.3333333333% - 6rem);
+    overflow: hidden;
+}
+
+.beInterested__item:hover {
+    transition: all .4s;
+    color: var(--accent-color);
+}
+
+.beInterested__img {
+    margin-bottom: 1.5rem;
+    height: 25rem;
+    width: 100%;
+    border-radius: 3rem;
+    object-fit: contain;
+}
+
+.beInterested__title {
+    line-height: 3.1rem;
+}
+
+.beInterested__subtitle {
+    margin-bottom: 5rem;
+    line-height: 2.1rem;
+}
+
+.btn--beInterested {
+    width: 100%;
+    font-size: 2.3rem;
+    line-height: 1.55;
 }
 
 /* Contacts */
@@ -329,6 +425,64 @@ a:hover,
 
 .btn--toTop:hover {
     color: var(--accent-color);
+}
+
+/* Popup */
+.popup {
+    display: none;
+    max-width: 56rem;
+    max-height: 56rem;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup__wrapper {
+    padding: 4rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.popup__title {
+    font-family: 'CirceRounded', Arial, sans-serif;
+    font-size: 3.6rem;
+    line-height: 1.23;
+}
+
+.popup__form-field {
+    resize: none;
+}
+
+.btn--popup {
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.popup__border {
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 0.5rem;
+}
+
+.popup_open {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup_close {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 
 @media screen and (max-width: 1200px) {
@@ -421,6 +575,56 @@ a:hover,
         width: 100%;
     }
 
+    /* Form */
+    .form__action {
+        flex-basis: 100%;
+    }
+
+    .form2__img {
+        top: auto;
+        bottom: 0;
+        right: -6rem;
+        transform: rotate(90deg);
+        max-width: 35rem;
+        max-height: 21rem;
+    }
+
+    /* BeInterested */
+    .beInterested__list {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 0;
+        gap: 4rem;
+    }
+
+    .beInterested__item a {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .beInterested__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        flex-basis: 50%;
+    }
+
+    .beInterested__img {
+        margin-bottom: 0;
+        max-width: 30rem;
+    }
+
+    .btn--beInterested {
+        display: block;
+        padding: 0 0.5rem;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 2rem;
+    }
+
+    /* Contacts */
     .contacts__wrapper {
         display: flex;
         flex-direction: column;
@@ -434,6 +638,7 @@ a:hover,
         width: 100%;
     }
 
+    /* Footer */
     .footer {
         padding: 4rem 2rem;
     }
@@ -449,6 +654,14 @@ a:hover,
 }
 
 @media screen and (max-width: 640px) {
+    .form1__img {
+        position: absolute;
+        transform: rotate(90deg);
+        bottom: 0;
+        right: -6rem;
+    }
+
+    /* Contacts */
     .contacts__card {
         padding: 4.5rem 2rem;
         margin: 0 auto;
@@ -478,10 +691,18 @@ a:hover,
         line-height: 6.4rem;
     }
 
+
+    h6,
+    .h6 {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+
     .container {
         max-width: 340px;
     }
 
+    /* Proposition  */
     .proposition {
         padding: 0;
     }
@@ -509,10 +730,12 @@ a:hover,
         display: none;
     }
 
+    /* Advantages */
     .advantages__img {
         max-width: 30rem;
     }
 
+    /* Promotions */
     .promotions__item a {
         flex-direction: column;
     }
@@ -523,6 +746,49 @@ a:hover,
     }
 
     .btn--promotions--display {
+        padding: 1rem;
+    }
+
+    /* Form2 */
+    .form__action {
+        padding: 2rem 2rem 10rem;
+    }
+
+    .form__title {
+        margin-bottom: 2rem;
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+    }
+
+    .form2__img {
+        max-width: 20rem;
+        max-height: 14rem;
+    }
+
+    .btn--form {
+        width: 16rem;
+    }
+
+    /* Be interested */
+    .beInterested .section__title {
+        font-size: 3.4rem;
+        line-height: 5.4rem;
+    }
+
+    .beInterested__item a {
+        flex-direction: column;
+    }
+
+    .beInterested__content {
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .beInterested__subtitle {
+        margin-bottom: 0;
+    }
+
+    .btn--beInterested {
         padding: 1rem;
     }
 }

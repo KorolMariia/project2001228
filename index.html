@@ -216,6 +216,21 @@
         <!-- Form #1 -->
         <section class="form1">
             <div class="container">
+                <form class="form__wrapper flex">
+                    <div class="form1__image">
+                        <img class="form1__img" src="images/form1.png" alt="" loading />
+                    </div>
+                    <div class="form__action flex">
+                        <p class="form__title font-800">Оставьте свой номер и получите</p>
+                        <label class="h6 font-700" for="name">Ваше имя</label>
+                        <input class="form__input h6 font-400" type="text" id="name" name="name"
+                            placeholder="Как к вам обращаться?" />
+                        <label class="h6 font-700" for="name">Ваше телефон</label>
+                        <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
+                        <button class="btn btn--color btn--form" type="submit">Отправить</button>
+                    </div>
+
+                </form>
             </div>
         </section>
 
@@ -228,12 +243,74 @@
         <!-- Form #2 -->
         <section class="form2">
             <div class="container">
+                <form class="form__wrapper flex">
+                    <div class="form__action flex">
+                        <p class="form__title font-800">Оставьте свой номер и получите</p>
+                        <label class="h6 font-700" for="name">Ваше имя</label>
+                        <input class="form__input h6 font-400" type="text" id="name" name="name"
+                            placeholder="Как к вам обращаться?" />
+                        <label class="h6 font-700" for="name">Ваше телефон</label>
+                        <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
+                        <button class="btn btn--color btn--form" type="submit">Отправить</button>
+                    </div>
+                    <div>
+                        <img class="form2__img" src="images/form2.png" alt="" loading />
+                    </div>
+                </form>
             </div>
         </section>
 
         <!--  Be interested -->
         <section class=" beInterested">
             <div class="container">
+                <p class="section__title h3 font-800 text-center">Вас может заинтересовать</p>
+                <ul class="beInterested__list flex flex-wrap justify-between">
+                    <li class="beInterested__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="beInterested__img" src="images/beInterested1.jpg" alt="" loading />
+                            </span>
+                            <span class="beInterested__content">
+                                <div>
+                                    <span class="beInterested__title h6 font-700 clamped">Товар 1</span>
+                                    <span class="beInterested__subtitle h6 font-400 clamped">Характеристики товара
+                                        1</span>
+                                </div>
+                                <button class="btn btn--color btn--beInterested h6 font-600">Подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="beInterested__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="beInterested__img" src="images/beInterested2.jpg" alt="" loading />
+                            </span>
+                            <span class="beInterested__content">
+                                <div>
+                                    <span class="beInterested__title h6 font-700 clamped">Товар 2</span>
+                                    <span class="beInterested__subtitle h6 font-400 clamped">Характеристики товара
+                                        2</span>
+                                </div>
+                                <button class="btn btn--color btn--beInterested h6 font-600">Подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="beInterested__item">
+                        <a class="secondary-color" href="#">
+                            <span>
+                                <img class="beInterested__img" src="images/beInterested3.jpg" alt="" loading />
+                            </span>
+                            <span class="beInterested__content">
+                                <div>
+                                    <span class="beInterested__title h6 font-700 clamped">Товар 3</span>
+                                    <span class="beInterested__subtitle h6 font-400 clamped">Характеристики товара
+                                        3</span>
+                                </div>
+                                <button class="btn btn--color btn--beInterested h6 font-600">Подробнее</button>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -297,6 +374,21 @@
             <button class="btn btn--toTop font-600 primary-color"> Наверх &#8593 </button>
         </div>
     </footer>
+
+    <!-- Popup -->
+    <div class="popup">
+        <div class="popup__wrapper flex">
+            <p class="popup__title font-600 text-center">Заказать обратный звонок</p>
+            <input class="form__input h6 font-400 popup__border" type="text" placeholder="Как к вам обращаться?" />
+            <input class="form__input h6 font-400 popup__border" type="tel" placeholder="(999)999-99-99">
+            <textarea name="message" rows="6" class="popup__form-field popup__border"
+                placeholder="Комментарий, если необходимо"></textarea>
+            <button class="btn btn--color btn--popup" type="submit">Отправить</button>
+        </div>
+        <div class="popup_close">
+            <img src="images/close.svg" alt="">
+        </div>
+    </div>
 
     <script src="/js/index.js"></script>
 </body>
