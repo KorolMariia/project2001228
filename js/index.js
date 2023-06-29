@@ -13,28 +13,53 @@ liItems.forEach((li) => {
 });
 
 // Popup
-const buttons = document.querySelectorAll('.btn--color');
+const buttons = document.querySelectorAll('.btn--openModal');
 const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup_close');
+
 buttons.forEach((button) =>
   button.addEventListener('click', (event) => {
     event.stopPropagation();
+    event.preventDefault();
     popup.classList.toggle('popup_open');
     document.body.style.overflow = 'hidden';
   }),
 );
-popupClose.addEventListener('click', () => {
-  popup.classList.remove('popup_open');
-  document.body.style.overflow = '';
+
+// Popup Questions
+const btnQuestions = document.querySelectorAll('.btn--questions');
+const popupQuestions = document.querySelector('.popup__questions');
+
+btnQuestions.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const questionsItem = btn.closest('.questions__item');
+    const { textContent: title } = questionsItem.querySelector('.questions__title');
+    const { textContent: subtitle } = questionsItem.querySelector('.questions__subtitle');
+
+    popupQuestions.classList.toggle('popup_open');
+    document.body.style.overflow = 'hidden';
+
+    const popupContent = popupQuestions.querySelector('.popup__questions--content');
+    popupContent.innerHTML = `<p class="questions__title">${title}</p><p class="questions__subtitle">${subtitle}</p>`;
+  });
 });
 
-document.addEventListener('click', (event) => {
-  const target = event.target;
-  if (!popup.contains(target) && target !== popup) {
+// Close Popup
+const popupClose = document.querySelectorAll('.popup_close');
+
+popupClose.forEach((button) =>
+  button.addEventListener('click', (event) => {
     popup.classList.remove('popup_open');
+    popupQuestions.classList.remove('popup_open');
+    document.body.style.overflow = '';
+  }),
+);
+
+window.onclick = function (e) {
+  if (e.target.classList.contains('popup')) {
+    e.target.classList.remove('popup_open');
     document.body.style.overflow = '';
   }
-});
+};
 
 // Button to top
 const scrollBtnToTop = document.querySelector('.btn--toTop');
