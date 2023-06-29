@@ -77,8 +77,8 @@ a:hover,
     transition: all .4s;
 }
 
-.header__mobileNavOpen,
-.header__navMobile {
+.header__nav--open,
+.header__nav--xs {
     display: none;
 }
 
@@ -103,12 +103,12 @@ a:hover,
     max-height: 38rem;
 }
 
-.proposition__img--mobile {
+.proposition__img--xs {
     display: none;
 }
 
 
-.proposition__img--full {
+.proposition__img--xl {
     display: block;
 }
 
@@ -130,6 +130,10 @@ a:hover,
 
 .advantages__img {
     margin-bottom: 1.5rem;
+
+}
+
+.advantages__img img {
     height: 25rem;
     width: 100%;
     border-radius: 3rem;
@@ -154,7 +158,7 @@ a:hover,
 .uses__shadow::after {
     content: "";
     position: absolute;
-    bottom: 0.2rem;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 80%;
@@ -162,7 +166,13 @@ a:hover,
 }
 
 .uses__img {
-    height: 96rem;
+    height: 100%;
+    line-height: 0;
+}
+
+.uses__img img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -195,7 +205,12 @@ a:hover,
 
 .uses__subimg {
     width: 100%;
-    height: 47rem;
+    line-height: 0;
+}
+
+.uses__subimg img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -243,6 +258,7 @@ a:hover,
 }
 
 .promotions__subtitle {
+    margin-bottom: 3rem;
     line-height: 2.1rem;
 }
 
@@ -251,7 +267,7 @@ a:hover,
     font-size: 2.3rem;
 }
 
-.btn--promotions--display {
+.btn--hidden--xl {
     display: none;
 }
 
@@ -276,25 +292,22 @@ a:hover,
     border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
 }
 
-.catalog__content {
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
 .catalog__content span {
+    display: block;
+    margin-bottom: 0.8rem;
     line-height: 1.5;
     white-space: nowrap;
 }
 
-.catalog__content p {
+.catalog__content div {
     font-size: 1.4rem;
     line-height: 1.55;
     opacity: .6;
 }
 
-.catalog__action {
-    flex-direction: column;
-    gap: 2rem;
+.catalog__action span {
+    display: block;
+    margin-bottom: 2rem;
 }
 
 .btn--catalog {
@@ -589,8 +602,8 @@ a:hover,
 .popup_close {
     padding: 1rem;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 2rem;
+    right: 2rem;
     cursor: pointer;
 }
 
@@ -601,7 +614,7 @@ a:hover,
         font-size: 1.8rem;
     }
 
-    .catalog__content p {
+    .catalog__content div {
         font-size: 1.2rem;
     }
 
@@ -645,32 +658,32 @@ a:hover,
         font-size: 1.8rem;
     }
 
-    .header__mobileNavOpen {
+    .header__nav--open {
         display: block;
         padding: 1rem 0 0 1rem;
         cursor: pointer;
     }
 
-    .header__mobileNavOpen img {
+    .header__nav--open img {
         width: 32px;
         height: 32px;
         max-width: fit-content;
     }
 
-    .header__navMobile {
+    .header__nav--xs {
         padding: 2rem 2rem 4rem;
         flex-direction: column;
         align-items: center;
         gap: 3rem;
     }
 
-    .header__nav--mobile {
+    .header__link--xs {
         flex-direction: column;
         align-items: center;
         gap: 3rem;
     }
 
-    .header__contacts--mobile {
+    .header__contacts-xs {
         gap: 1rem;
     }
 
@@ -724,7 +737,6 @@ a:hover,
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 5rem;
         flex-basis: 50%;
     }
 
@@ -737,7 +749,7 @@ a:hover,
         display: none;
     }
 
-    .btn--promotions--display {
+    .btn--hidden--xl {
         display: block;
         padding: 0 0.5rem;
         width: 100%;
@@ -794,18 +806,12 @@ a:hover,
     .beInterested__item a {
         display: flex;
         justify-content: space-between;
-        gap: 2rem;
-    }
-
-    .beInterested__item a span {
-        flex-basis: calc(50% - 1rem);
     }
 
     .beInterested__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 5rem;
     }
 
     .beInterested__img {
@@ -853,6 +859,10 @@ a:hover,
 @media screen and (max-width: 640px) {
     .header__logo a span {
         font-size: 1.6rem;
+    }
+
+    .uses__sublist {
+        flex-direction: column;
     }
 
     /* Catalog */
@@ -935,17 +945,17 @@ a:hover,
         text-align: center;
     }
 
-    .proposition__img--mobile {
+    .proposition__img--xs {
         display: block;
         min-width: 30rem;
     }
 
-    .proposition__img--full {
+    .proposition__img--xl {
         display: none;
     }
 
     /* Advantages */
-    .advantages__img {
+    .advantages__img img {
         max-width: 30rem;
     }
 
@@ -954,12 +964,7 @@ a:hover,
         flex-direction: column;
     }
 
-    .promotions__content {
-        gap: 3rem;
-        text-align: center;
-    }
-
-    .btn--promotions--display {
+    .btn--hidden--xl {
         padding: 1rem;
     }
 
@@ -974,7 +979,7 @@ a:hover,
         line-height: 2.7rem;
     }
 
-    .form2__img {
+    .form2__img img {
         max-width: 20rem;
         max-height: 14rem;
     }
@@ -994,12 +999,11 @@ a:hover,
     }
 
     .beInterested__content {
-        gap: 3rem;
         text-align: center;
     }
 
     .beInterested__subtitle {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 
     .btn--beInterested {

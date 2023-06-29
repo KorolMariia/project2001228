@@ -13,9 +13,9 @@ liItems.forEach((li) => {
 });
 
 // Nav mobile
-const mobileNavOpen = document.querySelector('.header__mobileNavOpen');
-const navMobile = document.querySelector('.header__navMobile');
-const navLinks = document.querySelectorAll('.header__nav--mobile a');
+const mobileNavOpen = document.querySelector('.header__nav--open');
+const navMobile = document.querySelector('.header__nav--xs');
+const navLinks = document.querySelectorAll('.header__link--xs a');
 
 mobileNavOpen.addEventListener('click', () => {
   navMobile.classList.toggle('show');
@@ -35,7 +35,7 @@ navLinks.forEach((link) => {
 });
 
 // Popup
-const buttons = document.querySelectorAll('.btn--openModal');
+const buttons = document.querySelectorAll('.js--open--modal');
 const popup = document.querySelector('.popup');
 
 buttons.forEach((button) =>
@@ -76,12 +76,13 @@ popupClose.forEach((button) =>
   }),
 );
 
-window.onclick = function (e) {
-  if (e.target.classList.contains('popup')) {
-    e.target.classList.remove('popup_open');
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  if (!target.closest('.popup__wrapper') && !target.closest('.popup_close')) {
+    popup.classList.remove('show');
     document.body.style.overflow = '';
   }
-};
+});
 
 // Button to top
 const scrollBtnToTop = document.querySelector('.btn--toTop');
