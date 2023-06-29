@@ -9,6 +9,10 @@
     --secondary-accent-color: #dedede;
 }
 
+.wrapper {
+    overflow: hidden;
+}
+
 .container {
     width: 100%;
     padding: 0 2rem;
@@ -51,6 +55,10 @@
 
 .header__nav {
     gap: 3rem;
+}
+
+.header__logo {
+    min-width: 40rem;
 }
 
 .header__contacts {
@@ -236,7 +244,6 @@ a:hover,
 .btn--promotions {
     width: 100%;
     font-size: 2.3rem;
-    line-height: 1.55;
 }
 
 .btn--promotions--display {
@@ -443,7 +450,6 @@ a:hover,
 .btn--beInterested {
     width: 100%;
     font-size: 2.3rem;
-    line-height: 1.55;
 }
 
 /* Contacts */
@@ -631,8 +637,8 @@ a:hover,
 
     h3,
     .h3 {
-        font-size: 5.1rem;
-        line-height: 7.9rem;
+        font-size: 4.5rem;
+        line-height: 7rem;
     }
 
     .container {
@@ -687,6 +693,7 @@ a:hover,
         display: block;
         padding: 0 0.5rem;
         width: 100%;
+        white-space: nowrap;
     }
 
     /* Catalog */
@@ -742,12 +749,15 @@ a:hover,
         gap: 2rem;
     }
 
+    .beInterested__item a span {
+        flex-basis: calc(50% - 1rem);
+    }
+
     .beInterested__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5rem;
-        flex-basis: 50%;
     }
 
     .beInterested__img {
