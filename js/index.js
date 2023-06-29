@@ -12,6 +12,28 @@ liItems.forEach((li) => {
   });
 });
 
+// Nav mobile
+const mobileNavOpen = document.querySelector('.header__mobileNavOpen');
+const navMobile = document.querySelector('.header__navMobile');
+const navLinks = document.querySelectorAll('.header__nav--mobile a');
+
+mobileNavOpen.addEventListener('click', () => {
+  navMobile.classList.toggle('show');
+});
+
+navMobile.addEventListener('click', (event) => {
+  const target = event.target;
+  if (target.classList.contains('header-contacts--icon')) {
+    navMobile.classList.remove('show');
+  }
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    navMobile.classList.remove('show');
+  });
+});
+
 // Popup
 const buttons = document.querySelectorAll('.btn--openModal');
 const popup = document.querySelector('.popup');
@@ -20,7 +42,7 @@ buttons.forEach((button) =>
   button.addEventListener('click', (event) => {
     event.stopPropagation();
     event.preventDefault();
-    popup.classList.toggle('popup_open');
+    popup.classList.toggle('show');
     document.body.style.overflow = 'hidden';
   }),
 );
@@ -35,7 +57,7 @@ btnQuestions.forEach((btn) => {
     const { textContent: title } = questionsItem.querySelector('.questions__title');
     const { textContent: subtitle } = questionsItem.querySelector('.questions__subtitle');
 
-    popupQuestions.classList.toggle('popup_open');
+    popupQuestions.classList.toggle('show');
     document.body.style.overflow = 'hidden';
 
     const popupContent = popupQuestions.querySelector('.popup__questions--content');
@@ -47,9 +69,9 @@ btnQuestions.forEach((btn) => {
 const popupClose = document.querySelectorAll('.popup_close');
 
 popupClose.forEach((button) =>
-  button.addEventListener('click', (event) => {
-    popup.classList.remove('popup_open');
-    popupQuestions.classList.remove('popup_open');
+  button.addEventListener('click', () => {
+    popup.classList.remove('show');
+    popupQuestions.classList.remove('show');
     document.body.style.overflow = '';
   }),
 );

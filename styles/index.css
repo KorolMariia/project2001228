@@ -58,7 +58,7 @@
 }
 
 .header__logo {
-    min-width: 40rem;
+    max-width: 40rem;
 }
 
 .header__contacts {
@@ -75,6 +75,11 @@ a:hover,
     border-radius: 50%;
     box-shadow: 0 0 1.5rem var(--accent-color);
     transition: all .4s;
+}
+
+.header__mobileNavOpen,
+.header__navMobile {
+    display: none;
 }
 
 /* Proposition */
@@ -557,7 +562,7 @@ a:hover,
     border-radius: 0.5rem;
 }
 
-.popup_open {
+.show {
     display: flex;
     animation: modal 0.4s alternate ease;
 }
@@ -625,7 +630,51 @@ a:hover,
     }
 }
 
-@media screen and (max-width: 980px) {}
+@media screen and (max-width: 980px) {
+
+    .header__nav,
+    .header__contacts {
+        display: none;
+    }
+
+    .header__wrapper {
+        min-height: 6.4rem;
+    }
+
+    .header__logo a span {
+        font-size: 1.8rem;
+    }
+
+    .header__mobileNavOpen {
+        display: block;
+        padding: 1rem 0 0 1rem;
+        cursor: pointer;
+    }
+
+    .header__mobileNavOpen img {
+        width: 32px;
+        height: 32px;
+        max-width: fit-content;
+    }
+
+    .header__navMobile {
+        padding: 2rem 2rem 4rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .header__nav--mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .header__contacts--mobile {
+        gap: 1rem;
+    }
+
+}
 
 @media screen and (max-width: 960px) {
 
@@ -802,6 +851,9 @@ a:hover,
 }
 
 @media screen and (max-width: 640px) {
+    .header__logo a span {
+        font-size: 1.6rem;
+    }
 
     /* Catalog */
     .catalog__item {
