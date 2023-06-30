@@ -766,6 +766,7 @@ a:hover,
     /* Advantages */
     .advantages__list {
         flex-direction: column;
+        gap: 3rem;
     }
 
     /* Uses */
@@ -924,6 +925,10 @@ a:hover,
         align-items: stretch;
     }
 
+    .catalog__action button {
+        width: 100%;
+    }
+
     /* Form */
     .form1__img img {
         position: absolute;
@@ -1000,7 +1005,7 @@ a:hover,
     h3,
     .h3 {
         font-size: 4.1rem;
-        line-height: 6.4rem;
+        line-height: 3.7rem;
     }
 
 
