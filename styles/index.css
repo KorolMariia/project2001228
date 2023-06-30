@@ -197,10 +197,6 @@ a:hover,
     object-fit: cover;
 }
 
-.uses__subitem:nth-child(3) {
-    flex-basis: 100%;
-}
-
 .zoomable-img {
     transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -381,6 +377,7 @@ a:hover,
 .iti__country-list {
     bottom: 100%;
     border-radius: 1rem;
+    max-width: 40rem;
 }
 
 .iti__selected-flag {
@@ -827,6 +824,10 @@ a:hover,
         transform: rotate(90deg);
         max-width: 35rem;
         max-height: 21rem;
+    }
+
+    .iti__country-list {
+        max-width: 30rem;
     }
 
     /* Questions */
