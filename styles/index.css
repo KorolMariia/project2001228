@@ -930,6 +930,7 @@ a:hover,
         transform: rotate(90deg);
         bottom: 0;
         right: -6rem;
+        max-height: 32rem;
     }
 
     /* Questions */
@@ -1010,7 +1011,7 @@ a:hover,
     }
 
     .container {
-        max-width: 360px;
+        max-width: 340px;
     }
 
     /* Proposition  */
@@ -1053,7 +1054,7 @@ a:hover,
 
     /* Form2 */
     .form__action {
-        padding: 1.25em 1.25em 0.6em;
+        padding: 1.25em 1.25em 1.2em;
     }
 
     .iti__country-list {
@@ -1062,9 +1063,14 @@ a:hover,
 
 
     .form__title {
-        margin-bottom: 2rem;
-        font-size: 2.7rem;
-        line-height: 2.7rem;
+        margin-bottom: 5rem;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+    }
+
+    .form1__img img {
+        max-height: 17.5rem;
+        right: -4rem;
     }
 
     .form2__img img {
