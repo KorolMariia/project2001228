@@ -390,9 +390,8 @@ a:hover,
 
 .iti__country--code {
     position: absolute;
-    z-index: 1000;
-    left: 12%;
-    bottom: 34%;
+    left: 3.5em;
+    bottom: 1.1em;
     font-family: 'CirceRounded', Arial, sans-serif;
     font-size: 1.6rem;
     color: var(--secondary-color)
@@ -625,6 +624,10 @@ a:hover,
 
 .popup .error--text {
     margin: 0;
+}
+
+.popup .iti__country--code {
+    bottom: 1.4em;
 }
 
 
@@ -1081,7 +1084,6 @@ a:hover,
     .iti__country-list {
         width: 25rem;
     }
-
 
     .form__title {
         margin-bottom: 5rem;
