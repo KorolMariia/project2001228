@@ -57,7 +57,7 @@ a:hover,
     transition: all .4s;
 }
 
-.header-contacts--icon:hover {
+.header__contacts--img img:hover {
     border-radius: 50%;
     box-shadow: 0 0 1.5rem var(--accent-color);
     transition: all .4s;
@@ -228,11 +228,17 @@ a:hover,
 }
 
 .promotions__img {
+    display: block;
     margin-bottom: 1.5rem;
-    height: 25rem;
     width: 100%;
-    border-radius: 3rem;
+    height: 25rem;
+}
+
+.promotions__img img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    border-radius: 3rem;
 }
 
 .promotions__title {
@@ -336,12 +342,12 @@ a:hover,
     line-height: 4rem;
 }
 
-.form1__image {
+.form1__img {
     display: flex;
     align-items: flex-end;
 }
 
-.form1__img {
+.form1__img img {
     transform: rotate(180deg);
     max-width: 100%;
     max-height: 39rem;
@@ -422,8 +428,13 @@ a:hover,
     margin-bottom: 1.5rem;
     height: 25rem;
     width: 100%;
-    border-radius: 3rem;
+}
+
+.beInterested__img img {
+    height: 100%;
+    width: 100%;
     object-fit: contain;
+    border-radius: 3rem;
 }
 
 .beInterested__title {
@@ -473,7 +484,7 @@ a:hover,
     flex-direction: column;
 }
 
-.contacts--icon:hover {
+.contacts--icon img:hover {
     box-shadow: 0 0 1.5rem var(--accent-color);
     transition: all .4s;
 }
@@ -837,7 +848,7 @@ a:hover,
     }
 
     /* Form */
-    .form1__img {
+    .form1__img img {
         position: absolute;
         transform: rotate(90deg);
         bottom: 0;
@@ -881,13 +892,13 @@ a:hover,
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 90vh;
+        height: 91vh;
         max-height: 100%;
         bottom: 0;
     }
 
     .popup_close {
-        top: 1.5rem;
+        top: 1rem;
         right: 1rem;
     }
 }
