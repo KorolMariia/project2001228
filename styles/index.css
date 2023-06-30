@@ -630,7 +630,6 @@ a:hover,
     bottom: 1.4em;
 }
 
-
 .show {
     display: flex;
     animation: modal 0.4s alternate ease;
@@ -942,6 +941,14 @@ a:hover,
         bottom: 0;
         right: -6rem;
         max-height: 32rem;
+    }
+
+    .popup .iti__country--code {
+        bottom: 1.3em;
+    }
+
+    .iti__country--code {
+        bottom: 1em;
     }
 
     /* Questions */
