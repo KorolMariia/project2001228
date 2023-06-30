@@ -377,7 +377,6 @@ a:hover,
 .iti__country-list {
     bottom: 100%;
     border-radius: 1rem;
-    max-width: 40rem;
 }
 
 .iti__selected-flag {
@@ -692,6 +691,12 @@ a:hover,
 @media screen and (max-width: 1023px) {
     .container {
         max-width: 1000px;
+    }
+
+    .iti__country-list {
+        width: 40rem;
+        overflow-x: hidden;
+        white-space: normal;
     }
 }
 
@@ -1051,32 +1056,37 @@ a:hover,
         padding: 1.25em 1.25em 0.6em;
     }
 
-    .form__title {
-        margin-bottom: 2rem;
-        font-size: 2.7rem;
-        line-height: 2.7rem;
+    .iti__country-list {
+        width: 25rem;
     }
+}
 
-    .form2__img img {
-        max-width: 20rem;
-        max-height: 14rem;
-    }
+.form__title {
+    margin-bottom: 2rem;
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+}
 
-    /* Be interested */
-    .beInterested .section__title {
-        font-size: 3.4rem;
-        line-height: 5.4rem;
-    }
+.form2__img img {
+    max-width: 20rem;
+    max-height: 14rem;
+}
 
-    .beInterested__item a {
-        flex-direction: column;
-    }
+/* Be interested */
+.beInterested .section__title {
+    font-size: 3.4rem;
+    line-height: 5.4rem;
+}
 
-    .beInterested__content {
-        text-align: center;
-    }
+.beInterested__item a {
+    flex-direction: column;
+}
 
-    .beInterested__subtitle {
-        margin-bottom: 2rem;
-    }
+.beInterested__content {
+    text-align: center;
+}
+
+.beInterested__subtitle {
+    margin-bottom: 2rem;
+}
 }
