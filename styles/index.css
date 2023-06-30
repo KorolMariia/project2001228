@@ -20,20 +20,6 @@
     max-width: 1240px;
 }
 
-.btn--color {
-    padding: 1.5rem;
-    color: var(--primary-color);
-    background-color: var(--accent-color);
-    border-radius: 1.5rem;
-    line-height: 1.55;
-    font-weight: 600;
-}
-
-.btn--color:hover {
-    background-color: rgba(224, 58, 58, 0.8);
-    transition: all .4s;
-}
-
 .section__title {
     margin-bottom: 3rem;
 }
@@ -90,13 +76,9 @@ a:hover,
 
 .proposition__content {
     flex-direction: column;
+    align-items: flex-start;
     gap: 7rem;
     flex-basis: 50%;
-}
-
-.btn--proposition {
-    width: 20rem;
-    font-size: 1.4rem;
 }
 
 .proposition__img {
@@ -262,9 +244,8 @@ a:hover,
     line-height: 2.1rem;
 }
 
-.btn--promotions {
+.promotions button {
     width: 100%;
-    font-size: 2.3rem;
 }
 
 .btn--hidden--xl {
@@ -308,11 +289,6 @@ a:hover,
 .catalog__action span {
     display: block;
     margin-bottom: 2rem;
-}
-
-.btn--catalog {
-    padding: 0.8rem 1.5rem;
-    border-radius: 0.5rem;
 }
 
 .border--bottom {
@@ -379,8 +355,12 @@ a:hover,
     max-height: 42rem;
 }
 
-.btn--form {
-    width: 20rem;
+.form__action button {
+    padding: 1.5rem;
+    width: 16rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 1rem;
 }
 
 
@@ -412,15 +392,6 @@ a:hover,
 
 .questions__subtitle {
     line-height: 3.1rem;
-}
-
-.btn--questions {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn--questions:hover {
-    color: var(--accent-color);
 }
 
 /* BeInterested */
@@ -464,9 +435,8 @@ a:hover,
     line-height: 2.1rem;
 }
 
-.btn--beInterested {
+.beInterested__content button {
     width: 100%;
-    font-size: 2.3rem;
 }
 
 /* Contacts */
@@ -521,9 +491,11 @@ a:hover,
 
 .btn--toTop {
     font-size: 2.5rem;
+    background-color: transparent;
 }
 
 .btn--toTop:hover {
+    background-color: transparent;
     color: var(--accent-color);
 }
 
@@ -565,6 +537,7 @@ a:hover,
 }
 
 .btn--popup {
+    padding: 1.5rem;
     width: 100%;
     border-radius: 0.5rem;
     font-size: 1.6rem;
@@ -581,8 +554,8 @@ a:hover,
 }
 
 .popup__questions--content {
-    margin: 15rem;
     height: auto;
+    width: 60rem;
 }
 
 @keyframes modal {
@@ -654,20 +627,20 @@ a:hover,
         min-height: 6.4rem;
     }
 
-    .header__logo a span {
+    .header__logo a {
+        display: flex;
         font-size: 1.8rem;
     }
 
     .header__nav--open {
         display: block;
-        padding: 1rem 0 0 1rem;
         cursor: pointer;
     }
 
     .header__nav--open img {
-        width: 32px;
-        height: 32px;
-        max-width: fit-content;
+        display: block;
+        max-width: 3.2rem;
+        max-height: 3.2rem;
     }
 
     .header__nav--xs {
@@ -745,15 +718,12 @@ a:hover,
         max-width: 30rem;
     }
 
-    .btn--promotions {
+    .btn--hidden--xs {
         display: none;
     }
 
     .btn--hidden--xl {
         display: block;
-        padding: 0 0.5rem;
-        width: 100%;
-        white-space: nowrap;
     }
 
     /* Catalog */
@@ -791,7 +761,7 @@ a:hover,
         text-overflow: initial;
     }
 
-    .btn--questions {
+    .questions__item button {
         display: none;
     }
 
@@ -819,11 +789,7 @@ a:hover,
         max-width: 30rem;
     }
 
-    .btn--beInterested {
-        display: block;
-        padding: 0 0.5rem;
-        width: 100%;
-        white-space: nowrap;
+    .beInterested__content button {
         font-size: 2rem;
     }
 
@@ -907,6 +873,25 @@ a:hover,
     }
 }
 
+@media screen and (max-width: 560px) {
+    .popup {
+        background-color: var(--secondary-color);
+    }
+
+    .popup__wrapper {
+        position: fixed;
+        margin: 0;
+        height: 90vh;
+        max-height: 100%;
+        bottom: 0;
+    }
+
+    .popup_close {
+        top: 1.5rem;
+        right: 1rem;
+    }
+}
+
 @media screen and (max-width: 478px) {
 
     h3,
@@ -984,10 +969,6 @@ a:hover,
         max-height: 14rem;
     }
 
-    .btn--form {
-        width: 16rem;
-    }
-
     /* Be interested */
     .beInterested .section__title {
         font-size: 3.4rem;
@@ -1006,7 +987,7 @@ a:hover,
         margin-bottom: 2rem;
     }
 
-    .btn--beInterested {
-        padding: 1rem;
+    .beInterested button {
+        padding: 0.5rem;
     }
 }

@@ -96,7 +96,38 @@ img {
     padding: 0;
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: rgba(224, 58, 58, 0.8);
+    transition: all .4s;
+}
+
+.btn--xl {
+    padding: 1rem;
+    font-size: 2.3rem;
+    line-height: 1.55;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    white-space: nowrap;
+}
+
+.btn--l {
+    padding: 1.5rem 6rem;
+    font-size: 1.4rem;
+    line-height: 1.55;
+    font-weight: 700;
+    border-radius: 1.5rem;
+}
+
+.btn--xs {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    white-space: nowrap;
 }
 
 .clamped {

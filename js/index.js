@@ -48,7 +48,7 @@ buttons.forEach((button) =>
 );
 
 // Popup Questions
-const btnQuestions = document.querySelectorAll('.btn--questions');
+const btnQuestions = document.querySelectorAll('.js--popup--questions');
 const popupQuestions = document.querySelector('.popup__questions');
 
 btnQuestions.forEach((btn) => {
@@ -63,6 +63,12 @@ btnQuestions.forEach((btn) => {
     const popupContent = popupQuestions.querySelector('.popup__questions--content');
     popupContent.innerHTML = `<p class="questions__title">${title}</p><p class="questions__subtitle">${subtitle}</p>`;
   });
+  document.addEventListener('click', (event) => {
+    if (event.target === popupQuestions) {
+      popupQuestions.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+  });
 });
 
 // Close Popup
@@ -75,7 +81,6 @@ popupClose.forEach((button) =>
     document.body.style.overflow = '';
   }),
 );
-
 document.addEventListener('click', (event) => {
   const target = event.target;
   if (!target.closest('.popup__wrapper') && !target.closest('.popup_close')) {
