@@ -336,6 +336,7 @@ a:hover,
     width: 100%;
     margin-bottom: 2rem;
     padding: 0 1em;
+    position: relative;
     font-family: 'CirceRounded', Arial, sans-serif;
     height: 5rem;
     font-size: 1.6rem;
@@ -375,6 +376,24 @@ a:hover,
     font-size: 1.4rem;
     font-weight: 600;
     border-radius: 1rem;
+}
+
+.iti__country-list {
+    bottom: 100%;
+    border-radius: 1rem;
+}
+
+.iti__selected-flag {
+    padding: 2rem !important;
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel],
+.iti--allow-dropdown input[type=text],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=tel],
+.iti--separate-dial-code input[type=text] {
+    padding-left: 72px !important;
 }
 
 /* Error */
@@ -581,6 +600,12 @@ a:hover,
 
 .popup__form-field {
     resize: none;
+    padding: 1em;
+}
+
+.popup__form-field::placeholder {
+    font-family: 'CirceRounded', Arial, sans-serif;
+    font-size: 1.6rem;
 }
 
 .btn--popup {
@@ -1053,23 +1078,4 @@ a:hover,
     .beInterested__subtitle {
         margin-bottom: 2rem;
     }
-}
-
-.iti__country-list {
-    bottom: 100%;
-    border-radius: 1rem;
-}
-
-.iti__selected-flag {
-    padding: 2rem !important;
-}
-
-
-.iti--allow-dropdown input,
-.iti--allow-dropdown input[type=tel],
-.iti--allow-dropdown input[type=text],
-.iti--separate-dial-code input,
-.iti--separate-dial-code input[type=tel],
-.iti--separate-dial-code input[type=text] {
-    padding-left: 72px !important;
 }
