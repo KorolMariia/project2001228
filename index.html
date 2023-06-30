@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Document</title>
 </head>
@@ -322,13 +323,13 @@
                         </div>
                         <div class="form__action flex">
                             <div class="form__title font-800">Оставьте свой номер и получите</div>
-                            <label class="h6 font-700" for="name">Ваше имя</label>
-                            <input class="form__input h6 font-400" type="text" id="name" name="name"
+                            <label class="font-700" for="name">Ваше имя</label>
+                            <input class="form__input font-400" type="text" id="name" name="name"
                                 placeholder="Как к вам обращаться?" />
                             <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
-                            <label class="h6 font-700" for="name">Ваше телефон</label>
-                            <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
-                            <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
+                            <label class="font-700" for="name">Ваше телефон</label>
+                            <input id="phone" type="tel" class="form__input font-400" placeholder="(999)999-99-99">
+                            <span class="error--hidden margin-top">Пожалуйста, заполните все обязательные поля</span>
                             <button class="btn js--form--error" type="submit">Отправить</button>
                         </div>
 
@@ -411,12 +412,12 @@
                     <form class="form__wrapper flex">
                         <div class="form__action flex">
                             <div class="form__title font-800">Оставьте свой номер и получите</div>
-                            <label class="h6 font-700" for="name">Ваше имя</label>
-                            <input class="form__input h6 font-400" type="text" id="name" name="name"
+                            <label class="font-700" for="name">Ваше имя</label>
+                            <input class="form__input font-400" type="text" id="name" name="name"
                                 placeholder="Как к вам обращаться?" />
                             <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
-                            <label class="h6 font-700" for="name">Ваше телефон</label>
-                            <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
+                            <label class="font-700" for="name">Ваше телефон</label>
+                            <input id="phone" type="tel" class="form__input font-400" placeholder="(999)999-99-99">
                             <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                             <button class="btn js--form--error" type="submit">Отправить</button>
                         </div>
@@ -538,9 +539,9 @@
         <div class="popup">
             <form class="popup__wrapper flex">
                 <div class="popup__title font-600 text-center">Заказать обратный звонок</div>
-                <input class="form__input h6 font-400 popup__border" type="text" placeholder="Как к вам обращаться?" />
+                <input class="form__input font-400 popup__border" type="text" placeholder="Как к вам обращаться?" />
                 <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
-                <input class="form__input h6 font-400 popup__border" type="tel" placeholder="(999)999-99-99">
+                <input id="phone" type="tel" class="form__input font-400" placeholder="(999)999-99-99">
                 <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                 <textarea name="message" rows="6" class="popup__form-field popup__border"
                     placeholder="Комментарий, если необходимо"></textarea>
@@ -563,6 +564,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="/js/index.js"></script>
 </body>
 

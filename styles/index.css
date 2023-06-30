@@ -327,12 +327,18 @@ a:hover,
     z-index: 100;
 }
 
+.form__action label {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .form__input {
-    margin-top: 0.5rem;
+    width: 100%;
     margin-bottom: 2rem;
     padding: 0 1em;
     font-family: 'CirceRounded', Arial, sans-serif;
     height: 5rem;
+    font-size: 1.6rem;
     border: 0.1rem solid rgb(245, 245, 245);
     border-radius: 1rem;
 }
@@ -363,6 +369,7 @@ a:hover,
 }
 
 .form__action button {
+    margin-top: 2rem;
     padding: 1.1em;
     width: 16rem;
     font-size: 1.4rem;
@@ -386,6 +393,10 @@ a:hover,
     color: red;
     font-size: 1.3rem;
     margin-bottom: 2rem;
+}
+
+.margin-top {
+    margin-top: 2rem;
 }
 
 .error-card {
@@ -584,11 +595,6 @@ a:hover,
     border-radius: 0.5rem;
 }
 
-.show {
-    display: flex;
-    animation: modal 0.4s alternate ease;
-}
-
 .popup__questions--content {
     height: auto;
     width: 60rem;
@@ -601,6 +607,12 @@ a:hover,
 
 .popup .error--text {
     margin: 0;
+}
+
+
+.show {
+    display: flex;
+    animation: modal 0.4s alternate ease;
 }
 
 @keyframes modal {
@@ -1041,4 +1053,23 @@ a:hover,
     .beInterested__subtitle {
         margin-bottom: 2rem;
     }
+}
+
+.iti__country-list {
+    bottom: 100%;
+    border-radius: 1rem;
+}
+
+.iti__selected-flag {
+    padding: 2rem !important;
+}
+
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel],
+.iti--allow-dropdown input[type=text],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=tel],
+.iti--separate-dial-code input[type=text] {
+    padding-left: 72px !important;
 }

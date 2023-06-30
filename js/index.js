@@ -16,20 +16,25 @@ liItems.forEach((li) => {
 const mobileNavOpen = document.querySelector('.header__nav--open');
 const navMobile = document.querySelector('.header__nav--xs');
 const navLinks = document.querySelectorAll('.header__link--xs a');
+const headerContacts = document.querySelectorAll('.header__contacts--img');
+const headerNavOpenImg = mobileNavOpen.querySelector('.header__nav--open img');
 
 mobileNavOpen.addEventListener('click', () => {
   navMobile.classList.toggle('show');
+  const isOpen = navMobile.classList.contains('show');
+  const newImgSrc = isOpen ? 'images/close.svg' : 'images/navopen.svg';
+  headerNavOpenImg.src = newImgSrc;
 });
 
 navMobile.addEventListener('click', (event) => {
   const target = event.target;
-  if (target.classList.contains('header-contacts--icon')) {
+  if (target.classList.contains('header__contacts--img') || target.closest('.header__link--xs')) {
     navMobile.classList.remove('show');
   }
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
+headerContacts.forEach((icon) => {
+  icon.addEventListener('click', () => {
     navMobile.classList.remove('show');
   });
 });
@@ -117,3 +122,52 @@ formError.forEach((button) =>
     }
   }),
 );
+
+// Form country code
+const inputs = document.querySelectorAll("#phone");
+let itiInstances = [];
+
+inputs.forEach(input => {
+  let iti;
+
+  window.intlTelInput(input, {
+    initialCountry: "ru",
+    geoIpLookup: callback => {
+      fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => callback(data.country_code))
+        .catch(() => callback("us"));
+    }
+  });
+
+  input.addEventListener("countrychange", () => {
+    updateInputValue(input);
+  });
+
+  input.addEventListener("input", () => {
+    updateInputValue(input);
+  });
+
+  window.addEventListener("load", () => {
+    iti = window.intlTelInputGlobals.getInstance(input);
+    itiInstances.push(iti);
+
+    if (iti.getSelectedCountryData().iso2 === "ru") {
+      const dialCode = iti.getSelectedCountryData().dialCode;
+      input.value = `+${dialCode}`;
+    }
+  });
+});
+
+const updateInputValue = (input) => {
+  const iti = itiInstances.find(instance => instance.node === input);
+  const dialCode = iti.getSelectedCountryData().dialCode;
+  const phoneNumber = input.value.replace(/[^0-9]/g, "");
+  let formattedNumber = `+${dialCode}${phoneNumber}`;
+
+  if (input.value.startsWith(`+${dialCode}`)) {
+    formattedNumber = `+${dialCode}${phoneNumber.slice(dialCode.length)}`;
+  }
+
+  input.value = formattedNumber;
+};
