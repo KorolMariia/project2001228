@@ -15,7 +15,7 @@
 
 .container {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 1.25em;
     margin: 0 auto;
     max-width: 1240px;
 }
@@ -35,7 +35,7 @@
 
 .header__wrapper {
     min-height: 8rem;
-    padding: 1rem 0;
+    padding: 0.63em 0;
     white-space: nowrap;
 }
 
@@ -71,7 +71,7 @@ a:hover,
 /* Proposition */
 .proposition {
     margin-top: 12rem;
-    padding: 3rem 0 4rem;
+    padding: 1.9em 0 2.5em;
 }
 
 .proposition__content {
@@ -96,7 +96,7 @@ a:hover,
 
 /* Advantages */
 .advantages {
-    padding: 4rem 0;
+    padding: 2.5em 0;
 }
 
 .advantages__list {
@@ -124,7 +124,7 @@ a:hover,
 
 /* Uses */
 .uses {
-    padding: 7.5rem 4rem 11.5rem;
+    padding: 4.4em 2.5em 7.2em;
 }
 
 .uses__list {
@@ -159,7 +159,7 @@ a:hover,
 }
 
 .uses__content {
-    padding: 3rem;
+    padding: 1.9em;
     position: absolute;
     bottom: 0;
     z-index: 100;
@@ -213,7 +213,7 @@ a:hover,
 /* Promotions */
 .promotions {
     font-family: 'Noto Sans', Arial, sans-serif;
-    padding: 6.5rem 0;
+    padding: 4.1em 0;
 }
 
 .promotions__list {
@@ -267,7 +267,7 @@ a:hover,
 /* Catalog */
 .catalog {
     font-family: 'CirceRounded', Arial, sans-serif;
-    padding: 6rem 0;
+    padding: 3.75em 0;
 }
 
 .catalog__list {
@@ -276,7 +276,7 @@ a:hover,
 
 .catalog__item {
     gap: 1rem;
-    padding: 1.5rem 0;
+    padding: 1em 0;
     border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
 }
 
@@ -300,17 +300,17 @@ a:hover,
 
 .border--bottom {
     margin-bottom: 0;
-    padding-bottom: 6rem;
+    padding-bottom: 0.26em;
     border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
 }
 
 /* Form */
 .form1 {
-    padding: 6rem 0;
+    padding: 3.75em 0;
 }
 
 .form2 {
-    padding: 8rem 0;
+    padding: 5em 0;
 }
 
 .form__wrapper {
@@ -321,7 +321,7 @@ a:hover,
 }
 
 .form__action {
-    padding: 4rem 4rem 7rem;
+    padding: 2.5em 2.5em 4.38em;
     flex-direction: column;
     flex-basis: 55%;
     z-index: 100;
@@ -330,7 +330,7 @@ a:hover,
 .form__input {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    padding: 0 2rem;
+    padding: 0 1em;
     font-family: 'CirceRounded', Arial, sans-serif;
     height: 5rem;
     border: 0.1rem solid rgb(245, 245, 245);
@@ -363,7 +363,7 @@ a:hover,
 }
 
 .form__action button {
-    padding: 1.5rem;
+    padding: 1.1em;
     width: 16rem;
     font-size: 1.4rem;
     font-weight: 600;
@@ -392,13 +392,13 @@ a:hover,
     font-size: 2rem;
     background-color: #F95D51;
     color: var(--primary-color);
-    padding: 2rem;
+    padding: 1em;
     text-align: center;
 }
 
 /* Questions */
 .questions {
-    padding: 4.5rem 0;
+    padding: 2.8em 0;
 }
 
 .questions__list {
@@ -407,7 +407,7 @@ a:hover,
 
 .questions__item {
     flex-direction: column;
-    padding: 3rem;
+    padding: 1.9em;
     height: 28rem;
     flex-grow: 1;
     flex-shrink: 1;
@@ -428,7 +428,7 @@ a:hover,
 
 /* BeInterested */
 .beInterested {
-    padding: 3rem 0;
+    padding: 1.9em 0;
     font-family: 'Noto Sans', Arial, sans-serif;
 }
 
@@ -483,7 +483,7 @@ a:hover,
 }
 
 .contacts__card {
-    padding: 6rem;
+    padding: 3.75em;
     position: absolute;
     bottom: 10%;
     left: 10%;
@@ -517,7 +517,7 @@ a:hover,
 
 /* Footer */
 .footer {
-    padding: 0.2rem 4rem 6rem 4rem;
+    padding: 0.2em 2.5em 3.75em 2.5em;
     background-color: var(--secondary-color);
 }
 
@@ -556,7 +556,7 @@ a:hover,
     margin: 0 10rem;
     max-width: 56rem;
     background-color: var(--primary-color);
-    padding: 4rem;
+    padding: 2.5em;
     flex-direction: column;
     align-items: stretch;
     gap: 2rem;
@@ -573,7 +573,7 @@ a:hover,
 }
 
 .btn--popup {
-    padding: 1.5rem;
+    padding: 1em;
     width: 100%;
     border-radius: 0.5rem;
     font-size: 1.6rem;
@@ -618,7 +618,7 @@ a:hover,
 }
 
 .popup_close {
-    padding: 1rem;
+    padding: 0.7em;
     position: fixed;
     top: 2rem;
     right: 2rem;
@@ -651,7 +651,7 @@ a:hover,
 
     /* Footer */
     .footer {
-        padding: 0.2rem 2rem 6rem 2rem;
+        padding: 0.2em 1.25em 3.75em 1.25em;
     }
 }
 
@@ -689,7 +689,7 @@ a:hover,
     }
 
     .header__nav--xs {
-        padding: 2rem 2rem 4rem;
+        padding: 1.25em 1.25em 2.5em;
         flex-direction: column;
         align-items: center;
         gap: 3rem;
@@ -731,7 +731,7 @@ a:hover,
 
     /* Uses */
     .uses {
-        padding: 3rem 2rem;
+        padding: 1.9em 1.25em;
     }
 
     .uses__list {
@@ -845,7 +845,7 @@ a:hover,
     }
 
     .contacts__card {
-        padding: 6rem 14rem;
+        padding: 3.75em 8.75em;
         margin: 0 auto;
         position: relative;
         left: 0;
@@ -854,7 +854,7 @@ a:hover,
 
     /* Footer */
     .footer {
-        padding: 4rem 2rem;
+        padding: 2.5em 1.25em;
     }
 
     .footer__wrapper {
@@ -898,7 +898,7 @@ a:hover,
 
     /* Contacts */
     .contacts__card {
-        padding: 4.5rem 2rem;
+        padding: 2.8em 1.25em;
         margin: 0 auto;
         position: relative;
         left: 0;
@@ -923,6 +923,10 @@ a:hover,
 
     .error-card {
         font-size: 1.6rem;
+    }
+
+    .btn--xl {
+        font-size: 2rem;
     }
 }
 
@@ -1004,13 +1008,9 @@ a:hover,
         flex-direction: column;
     }
 
-    .btn--hidden--xl {
-        padding: 1rem;
-    }
-
     /* Form2 */
     .form__action {
-        padding: 2rem 2rem 10rem;
+        padding: 1.25em 1.25em 0.6em;
     }
 
     .form__title {
@@ -1040,9 +1040,5 @@ a:hover,
 
     .beInterested__subtitle {
         margin-bottom: 2rem;
-    }
-
-    .beInterested button {
-        padding: 0.5rem;
     }
 }
