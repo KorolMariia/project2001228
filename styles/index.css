@@ -370,6 +370,31 @@ a:hover,
     border-radius: 1rem;
 }
 
+/* Error */
+.error--hidden {
+    display: none;
+}
+
+.error--active {
+    display: block;
+    border: 0.1rem solid red !important;
+}
+
+.error--text {
+    display: block;
+    font-family: 'CirceRounded', Arial, sans-serif;
+    color: red;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.error-card {
+    font-size: 2rem;
+    background-color: #F95D51;
+    color: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+}
 
 /* Questions */
 .questions {
@@ -528,9 +553,8 @@ a:hover,
 }
 
 .popup__wrapper {
-    margin: 0 4rem;
+    margin: 0 10rem;
     max-width: 56rem;
-    max-height: 56rem;
     background-color: var(--primary-color);
     padding: 4rem;
     flex-direction: column;
@@ -568,6 +592,15 @@ a:hover,
 .popup__questions--content {
     height: auto;
     width: 60rem;
+}
+
+.popup input {
+    margin: 0;
+    height: 6rem;
+}
+
+.popup .error--text {
+    margin: 0;
 }
 
 @keyframes modal {
@@ -883,24 +916,33 @@ a:hover,
     .contacts__action {
         font-size: 1.4rem;
     }
+
+    .popup__title {
+        font-size: 2.8rem;
+    }
+
+    .error-card {
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (max-width: 560px) {
     .popup {
-        height: 15vh;
+        height: 10vh;
         background-color: var(--secondary-color);
     }
 
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 85vh;
+        height: 90vh;
+        width: 100vw;
         max-height: 100%;
         bottom: 0;
     }
 
     .popup_close {
-        top: 5%;
+        top: 2%;
         right: 2%;
     }
 }
@@ -973,7 +1015,6 @@ a:hover,
 
     .form__title {
         margin-bottom: 2rem;
-        margin-right: 0.2rem;
         font-size: 2.7rem;
         line-height: 2.7rem;
     }

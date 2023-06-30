@@ -325,9 +325,11 @@
                             <label class="h6 font-700" for="name">Ваше имя</label>
                             <input class="form__input h6 font-400" type="text" id="name" name="name"
                                 placeholder="Как к вам обращаться?" />
+                            <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                             <label class="h6 font-700" for="name">Ваше телефон</label>
                             <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
-                            <button class="btn" type="submit">Отправить</button>
+                            <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
+                            <button class="btn js--form--error" type="submit">Отправить</button>
                         </div>
 
                     </form>
@@ -412,9 +414,11 @@
                             <label class="h6 font-700" for="name">Ваше имя</label>
                             <input class="form__input h6 font-400" type="text" id="name" name="name"
                                 placeholder="Как к вам обращаться?" />
+                            <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                             <label class="h6 font-700" for="name">Ваше телефон</label>
                             <input class="form__input h6 font-400" type="tel" placeholder="(999)999-99-99">
-                            <button class="btn" type="submit">Отправить</button>
+                            <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
+                            <button class="btn js--form--error" type="submit">Отправить</button>
                         </div>
                         <div class="form2__img">
                             <img src="images/form2.png" alt="" loading />
@@ -535,10 +539,13 @@
             <form class="popup__wrapper flex">
                 <div class="popup__title font-600 text-center">Заказать обратный звонок</div>
                 <input class="form__input h6 font-400 popup__border" type="text" placeholder="Как к вам обращаться?" />
+                <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                 <input class="form__input h6 font-400 popup__border" type="tel" placeholder="(999)999-99-99">
+                <span class="error--hidden">Пожалуйста, заполните все обязательные поля</span>
                 <textarea name="message" rows="6" class="popup__form-field popup__border"
                     placeholder="Комментарий, если необходимо"></textarea>
-                <button class="btn btn--popup font-700" type="submit">Отправить</button>
+                <span class="error--hidden error-card">Пожалуйста, заполните все обязательные поля</span>
+                <button class="btn btn--popup font-700 js--form--error" type="submit">Отправить</button>
             </form>
             <div class="popup_close">
                 <img src="images/close.svg" alt="">

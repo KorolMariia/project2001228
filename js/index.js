@@ -97,3 +97,23 @@ scrollBtnToTop.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
+
+// Form error
+const formError = document.querySelectorAll('.js--form--error');
+
+formError.forEach((button) =>
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    const parentForm = button.parentElement;
+    if (parentForm) {
+      const formInputs = parentForm.querySelectorAll('.form__input');
+      const errorHidden = parentForm.querySelectorAll('.error--hidden');
+      formInputs.forEach((input) => {
+        input.classList.toggle('error--active');
+      });
+      errorHidden.forEach((error) => {
+        error.classList.toggle('error--text');
+      });
+    }
+  }),
+);
