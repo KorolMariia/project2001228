@@ -1059,33 +1059,34 @@ a:hover,
     .iti__country-list {
         width: 25rem;
     }
-}
 
-.form__title {
-    margin-bottom: 2rem;
-    font-size: 2.7rem;
-    line-height: 2.7rem;
-}
 
-.form2__img img {
-    max-width: 20rem;
-    max-height: 14rem;
-}
+    .form__title {
+        margin-bottom: 2rem;
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+    }
 
-/* Be interested */
-.beInterested .section__title {
-    font-size: 3.4rem;
-    line-height: 5.4rem;
-}
+    .form2__img img {
+        max-width: 20rem;
+        max-height: 14rem;
+    }
 
-.beInterested__item a {
-    flex-direction: column;
-}
+    /* Be interested */
+    .beInterested .section__title {
+        font-size: 3.4rem;
+        line-height: 5.4rem;
+    }
 
-.beInterested__content {
-    text-align: center;
-}
+    .beInterested__item a {
+        flex-direction: column;
+    }
 
-.beInterested__subtitle {
-    margin-bottom: 2rem;
+    .beInterested__content {
+        text-align: center;
+    }
+
+    .beInterested__subtitle {
+        margin-bottom: 2rem;
+    }
 }
