@@ -751,6 +751,7 @@ a:hover,
     h2,
     .h2 {
         font-size: 3.5rem;
+        line-height: 3.5rem;
     }
 
     h3,
@@ -1002,6 +1003,12 @@ a:hover,
 
 @media screen and (max-width: 478px) {
 
+    h2,
+    .h2 {
+        font-size: 2.9rem;
+        line-height: 2.9rem;
+    }
+
     h3,
     .h3 {
         font-size: 4.1rem;
@@ -1034,7 +1041,6 @@ a:hover,
     }
 
     .proposition__title {
-        font-size: 2.9rem;
         text-align: center;
     }
 
