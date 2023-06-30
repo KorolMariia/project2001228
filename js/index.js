@@ -129,6 +129,8 @@ let itiInstances = [];
 
 inputs.forEach(input => {
   let iti;
+  const countryCodeSpan = document.createElement("span");
+  countryCodeSpan.classList.add("iti__country--code");
 
   window.intlTelInput(input, {
     initialCountry: "ru",
@@ -140,34 +142,36 @@ inputs.forEach(input => {
     }
   });
 
-  input.addEventListener("countrychange", () => {
-    updateInputValue(input);
-  });
-
-  input.addEventListener("input", () => {
-    updateInputValue(input);
-  });
-
   window.addEventListener("load", () => {
     iti = window.intlTelInputGlobals.getInstance(input);
     itiInstances.push(iti);
 
     if (iti.getSelectedCountryData().iso2 === "ru") {
       const dialCode = iti.getSelectedCountryData().dialCode;
-      input.value = `+${dialCode}`;
+      countryCodeSpan.textContent = `+${dialCode}`;
     }
   });
+
+  input.addEventListener("countrychange", () => {
+    updateCountryCode(countryCodeSpan, input);
+  });
+
+  input.addEventListener("input", () => {
+    updateCountryCode(countryCodeSpan, input);
+  });
+
+  input.parentNode.insertBefore(countryCodeSpan, input.nextSibling);
+
+  const updateCountryCode = (countryCodeSpan) => {
+    const dialCode = iti.getSelectedCountryData().dialCode;
+    countryCodeSpan.textContent = `+${dialCode}`;
+  };
+
+  input.addEventListener("focus", () => {
+    input.placeholder = "";
+  });
+
+  input.addEventListener("blur", () => {
+    input.placeholder = "(999)999-99-99";
+  });
 });
-
-const updateInputValue = (input) => {
-  const iti = itiInstances.find(instance => instance.node === input);
-  const dialCode = iti.getSelectedCountryData().dialCode;
-  const phoneNumber = input.value.replace(/[^0-9]/g, "");
-  let formattedNumber = `+${dialCode}${phoneNumber}`;
-
-  if (input.value.startsWith(`+${dialCode}`)) {
-    formattedNumber = `+${dialCode}${phoneNumber.slice(dialCode.length)}`;
-  }
-
-  input.value = formattedNumber;
-};

@@ -33,16 +33,19 @@ h3,
 h4,
 .h4 {
     font-size: 2.6rem;
+    line-height: 2.6rem;
 }
 
 h5,
 .h5 {
     font-size: 2.4rem;
+    line-height: 1.35;
 }
 
 h6,
 .h6 {
     font-size: 2rem;
+    line-height: 1.55;
 }
 
 .font-300 {
