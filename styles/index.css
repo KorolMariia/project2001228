@@ -186,6 +186,7 @@ a:hover,
 }
 
 .uses__subimg {
+    height: 100%;
     width: 100%;
     line-height: 0;
 }
@@ -886,13 +887,14 @@ a:hover,
 
 @media screen and (max-width: 560px) {
     .popup {
+        height: 5vh;
         background-color: var(--secondary-color);
     }
 
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 91vh;
+        height: 95vh;
         max-height: 100%;
         bottom: 0;
     }
