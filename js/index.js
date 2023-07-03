@@ -17,13 +17,10 @@ const mobileNavOpen = document.querySelector('.header__nav--open');
 const navMobile = document.querySelector('.header__nav--xs');
 const navLinks = document.querySelectorAll('.header__link--xs a');
 const headerContacts = document.querySelectorAll('.header__contacts--img');
-const headerNavOpenImg = mobileNavOpen.querySelector('.header__nav--open img');
 
-mobileNavOpen.addEventListener('click', () => {
+mobileNavOpen.addEventListener('click', function () {
+  this.classList.toggle('open');
   navMobile.classList.toggle('show');
-  const isOpen = navMobile.classList.contains('show');
-  const newImgSrc = isOpen ? 'images/close.svg' : 'images/navopen.svg';
-  headerNavOpenImg.src = newImgSrc;
 });
 
 navMobile.addEventListener('click', (event) => {
