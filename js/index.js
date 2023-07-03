@@ -124,7 +124,7 @@ formError.forEach((button) =>
 );
 
 // Form country code
-const inputs = document.querySelectorAll("#phone");
+const inputs = document.querySelectorAll(".js--phone");
 let itiInstances = [];
 
 inputs.forEach(input => {

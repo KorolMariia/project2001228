@@ -123,12 +123,14 @@ a:hover,
 }
 
 /* Uses */
+/* Uses */
 .uses {
     padding: 4.4em 2.5em 7.2em;
 }
 
 .uses__list {
     gap: 2rem;
+    height: 50rem;
 }
 
 .uses__item {
@@ -181,6 +183,7 @@ a:hover,
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: calc(50% - 2rem);
+    height: 24rem;
     overflow: hidden;
 }
 
@@ -640,13 +643,9 @@ a:hover,
         opacity: 0;
     }
 
-    ;
-
     100% {
         opacity: 1;
     }
-
-    ;
 }
 
 .popup_close {
@@ -772,6 +771,11 @@ a:hover,
 
     .uses__list {
         flex-direction: column;
+        height: auto;
+    }
+
+    .uses__subitem {
+        height: auto;
     }
 
     /* Promotions */
@@ -1026,8 +1030,8 @@ a:hover,
 
     h3,
     .h3 {
-        font-size: 3.7rem;
-        line-height: 3.7rem;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
     }
 
 
@@ -1039,6 +1043,10 @@ a:hover,
 
     .container {
         max-width: 340px;
+    }
+
+    .header .container {
+        max-width: 100%;
     }
 
     /* Proposition  */
@@ -1119,5 +1127,9 @@ a:hover,
 
     .beInterested__subtitle {
         margin-bottom: 2rem;
+    }
+
+    .beInterested__img {
+        max-height: 20rem;
     }
 }
