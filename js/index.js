@@ -19,7 +19,7 @@ const navLinks = document.querySelectorAll('.header__link--xs a');
 const headerContacts = document.querySelectorAll('.header__contacts--img');
 
 mobileNavOpen.addEventListener('click', function () {
-  this.classList.toggle('open');
+  mobileNavOpen.classList.toggle('open');
   navMobile.classList.toggle('show');
 });
 
@@ -27,12 +27,14 @@ navMobile.addEventListener('click', (event) => {
   const target = event.target;
   if (target.classList.contains('header__contacts--img') || target.closest('.header__link--xs')) {
     navMobile.classList.remove('show');
+    mobileNavOpen.classList.remove('open');
   }
 });
 
 headerContacts.forEach((icon) => {
   icon.addEventListener('click', () => {
     navMobile.classList.remove('show');
+    mobileNavOpen.classList.remove('open');
   });
 });
 

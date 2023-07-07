@@ -39,12 +39,17 @@
     white-space: nowrap;
 }
 
+.header__logo--center {
+    gap: 14rem;
+}
+
 .header__nav {
     gap: 3rem;
 }
 
 .header__logo {
     max-width: 40rem;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .header__contacts {
@@ -168,6 +173,7 @@ a:hover,
     overflow-y: auto;
     max-height: 100%;
     word-break: break-word;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .uses__subtitle {
@@ -210,7 +216,6 @@ a:hover,
 
 /* Promotions */
 .promotions {
-    font-family: 'Noto Sans', Arial, sans-serif;
     padding: 4.1em 0;
 }
 
@@ -242,6 +247,7 @@ a:hover,
 
 .promotions__title {
     line-height: 3.1rem;
+    font-family: 'Noto Sans', Arial, sans-serif;
 }
 
 .promotions__subtitle {
@@ -264,12 +270,12 @@ a:hover,
 
 /* Catalog */
 .catalog {
-    font-family: 'CirceRounded', Arial, sans-serif;
     padding: 3.75em 0;
 }
 
 .catalog__list {
     flex-direction: column;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .catalog__item {
@@ -334,11 +340,11 @@ a:hover,
     margin-bottom: 2rem;
     padding: 0 1em;
     position: relative;
-    font-family: 'CirceRounded', Arial, sans-serif;
     height: 5rem;
     font-size: 1.6rem;
     border: 0.1rem solid rgb(245, 245, 245);
     border-radius: 1rem;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .form__title {
@@ -395,7 +401,6 @@ a:hover,
     position: absolute;
     left: 3.5em;
     bottom: 1.1em;
-    font-family: 'CirceRounded', Arial, sans-serif;
     font-size: 1.6rem;
     color: var(--secondary-color)
 }
@@ -412,7 +417,6 @@ a:hover,
 
 .error--text {
     display: block;
-    font-family: 'CirceRounded', Arial, sans-serif;
     color: red;
     font-size: 1.3rem;
     margin-bottom: 2rem;
@@ -459,7 +463,6 @@ a:hover,
 /* BeInterested */
 .beInterested {
     padding: 1.9em 0;
-    font-family: 'Noto Sans', Arial, sans-serif;
 }
 
 .beInterested__list {
@@ -478,6 +481,10 @@ a:hover,
 .beInterested__item:hover {
     transition: all .4s;
     color: var(--accent-color);
+}
+
+.beInterested__title {
+    font-family: 'Noto Sans', Arial, sans-serif;
 }
 
 .beInterested__img {
@@ -503,7 +510,7 @@ a:hover,
 
 /* Contacts */
 .contacts__wrapper {
-    font-family: 'CirceRounded', Arial, sans-serif;
+
     position: relative;
 }
 
@@ -517,6 +524,7 @@ a:hover,
     flex-direction: column;
     gap: 3rem;
     width: 46rem;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .contacts__title {
@@ -585,10 +593,10 @@ a:hover,
     flex-direction: column;
     align-items: stretch;
     gap: 2rem;
+    font-family: 'CirceRounded', Arial, sans-serif;
 }
 
 .popup__title {
-    font-family: 'CirceRounded', Arial, sans-serif;
     font-size: 3.6rem;
     line-height: 1.23;
 }
@@ -599,7 +607,6 @@ a:hover,
 }
 
 .popup__form-field::placeholder {
-    font-family: 'CirceRounded', Arial, sans-serif;
     font-size: 1.6rem;
 }
 
@@ -657,6 +664,9 @@ a:hover,
 }
 
 @media screen and (max-width: 1200px) {
+    .header__logo--center {
+        gap: 10rem;
+    }
 
     /* Catalog */
     .catalog__content div {
@@ -680,11 +690,19 @@ a:hover,
     .footer {
         padding: 0.2em 1.25em 3.75em 1.25em;
     }
+
+    .popup__title {
+        font-size: 3.2rem;
+    }
 }
 
 @media screen and (max-width: 1023px) {
     .container {
         max-width: 1000px;
+    }
+
+    .header__logo--center {
+        gap: 5rem;
     }
 
     .iti__country-list {
@@ -748,11 +766,11 @@ a:hover,
 
     .line-1 {
         transform-origin: top left;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
     }
 
     .line-2 {
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5rem;
     }
 
     .line-3 {
@@ -761,7 +779,7 @@ a:hover,
 
     .header__nav--open.open .line-1 {
         transform: rotate(45deg);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
     }
 
     .header__nav--open.open .line-2 {
