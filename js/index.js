@@ -87,7 +87,7 @@ popupClose.forEach((button) =>
 );
 document.addEventListener('click', (event) => {
   const target = event.target;
-  if (!target.closest('.popup__wrapper') && !target.closest('.popup_close') && !target.classList.contains('iti__country--list')) {
+  if (!target.closest('.popup__wrapper') && !target.closest('.popup_close') && !target.closest('.iti__flag-container')) {
     popup.classList.remove('show');
     document.body.style.overflow = '';
   }
