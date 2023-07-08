@@ -1053,14 +1053,14 @@ a:hover,
     }
 
     .popup {
-        height: 12vh;
+        height: 13vh;
         background-color: var(--secondary-color);
     }
 
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 88vh;
+        height: 87vh;
         width: 100vw;
         max-height: 100%;
         bottom: 0;
