@@ -1067,7 +1067,7 @@ a:hover,
     }
 
     .popup_close {
-        top: 1%;
+        top: 0;
         right: 2%;
     }
 }
