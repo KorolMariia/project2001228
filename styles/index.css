@@ -1058,12 +1058,11 @@ a:hover,
     } */
 
     .popup__header {
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
         height: 10vh;
         background-color: var(--secondary-color);
+        width: 100%;
     }
 
     .popup__wrapper {
