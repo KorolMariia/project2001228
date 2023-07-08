@@ -1001,14 +1001,6 @@ a:hover,
         max-height: 32rem;
     }
 
-    .popup .iti__country--code {
-        bottom: 1.3em;
-    }
-
-    .iti__country--code {
-        bottom: 1em;
-    }
-
     /* Questions */
     .questions__title {
         font-size: 1.7rem;
