@@ -661,6 +661,7 @@ a:hover,
     top: 2rem;
     right: 2rem;
     cursor: pointer;
+    z-index: 1000;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1052,31 +1053,36 @@ a:hover,
         height: 50rem;
     }
 
-    /* .popup {
-        height: 15vh;
-        background-color: var(--secondary-color);
-    } */
-
     .popup__header {
-        position: fixed;
+        /* position: fixed;
         top: 0;
         height: 10vh;
         background-color: var(--secondary-color);
+        width: 100%; */
+        position: fixed;
+        top: 0;
+        height: 7rem;
+        background-color: var(--secondary-color);
         width: 100%;
+        z-index: 999;
     }
 
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 90vh;
+        /* height: 90vh; */
         width: 100vw;
-        max-height: 100%;
+        height: 100%;
         bottom: 0;
     }
 
     .popup_close {
         top: 2%;
         right: 2%;
+    }
+
+    .popup__title {
+        margin-top: 10rem;
     }
 }
 
