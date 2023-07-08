@@ -1053,22 +1053,21 @@ a:hover,
     }
 
     .popup {
-        top: 0;
-        height: 10vh;
+        height: 20vh;
         background-color: var(--secondary-color);
     }
 
     .popup__wrapper {
         position: fixed;
         margin: 0;
-        height: 90vh;
+        height: 80vh;
         width: 100vw;
         max-height: 100%;
         bottom: 0;
     }
 
     .popup_close {
-        top: 2%;
+        top: 6%;
         right: 2%;
     }
 }
