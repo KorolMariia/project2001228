@@ -1053,6 +1053,7 @@ a:hover,
     }
 
     .popup {
+        top: 0;
         height: 10vh;
         background-color: var(--secondary-color);
     }

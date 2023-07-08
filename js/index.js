@@ -123,6 +123,59 @@ formError.forEach((button) =>
 );
 
 // Form country code
+// const inputs = document.querySelectorAll(".js--phone");
+// let itiInstances = [];
+
+// inputs.forEach(input => {
+//   let iti;
+//   const countryCodeSpan = document.createElement("span");
+//   countryCodeSpan.classList.add("iti__country--code");
+
+//   window.intlTelInput(input, {
+//     initialCountry: "ru",
+//     geoIpLookup: callback => {
+//       fetch("https://ipapi.co/json")
+//         .then(res => res.json())
+//         .then(data => callback(data.country_code))
+//         .catch(() => callback("us"));
+//     }
+//   });
+
+//   window.addEventListener("load", () => {
+//     iti = window.intlTelInputGlobals.getInstance(input);
+//     itiInstances.push(iti);
+
+//     if (iti.getSelectedCountryData().iso2 === "ru") {
+//       const dialCode = iti.getSelectedCountryData().dialCode;
+//       countryCodeSpan.textContent = `+${dialCode}`;
+//     }
+//   });
+
+//   input.addEventListener("countrychange", () => {
+//     updateCountryCode(countryCodeSpan, input);
+//   });
+
+//   input.addEventListener("input", () => {
+//     updateCountryCode(countryCodeSpan, input);
+//   });
+
+//   input.parentNode.insertBefore(countryCodeSpan, input.nextSibling);
+
+//   const updateCountryCode = (countryCodeSpan) => {
+//     const dialCode = iti.getSelectedCountryData().dialCode;
+//     countryCodeSpan.textContent = `+${dialCode}`;
+//   };
+
+//   input.addEventListener("focus", () => {
+//     input.placeholder = "";
+//   });
+
+//   input.addEventListener("blur", () => {
+//     input.placeholder = "(999)999-99-99";
+//   });
+// });
+
+
 const inputs = document.querySelectorAll(".js--phone");
 let itiInstances = [];
 
@@ -148,23 +201,19 @@ inputs.forEach(input => {
     if (iti.getSelectedCountryData().iso2 === "ru") {
       const dialCode = iti.getSelectedCountryData().dialCode;
       countryCodeSpan.textContent = `+${dialCode}`;
+      console.log("Код страны:", `+${dialCode}`);
     }
   });
 
   input.addEventListener("countrychange", () => {
-    updateCountryCode(countryCodeSpan, input);
-  });
+    const selectedCountryData = iti.getSelectedCountryData();
+    const dialCode = selectedCountryData.dialCode;
+    countryCodeSpan.textContent = `+${dialCode}`;
 
-  input.addEventListener("input", () => {
-    updateCountryCode(countryCodeSpan, input);
+    console.log("Код страны:", `+${dialCode}`);
   });
 
   input.parentNode.insertBefore(countryCodeSpan, input.nextSibling);
-
-  const updateCountryCode = (countryCodeSpan) => {
-    const dialCode = iti.getSelectedCountryData().dialCode;
-    countryCodeSpan.textContent = `+${dialCode}`;
-  };
 
   input.addEventListener("focus", () => {
     input.placeholder = "";
