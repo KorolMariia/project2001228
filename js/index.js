@@ -78,13 +78,6 @@ btnQuestions.forEach((btn) => {
 // Close Popup
 const popupClose = document.querySelectorAll('.popup_close');
 
-const countrySelects = document.querySelectorAll('.iti__country--list');
-countrySelects.forEach((select) =>
-  select.addEventListener('click', (event) => {
-    event.stopPropagation();
-  }),
-);
-
 popupClose.forEach((button) =>
   button.addEventListener('click', () => {
     popup.classList.remove('show');
@@ -94,7 +87,7 @@ popupClose.forEach((button) =>
 );
 document.addEventListener('click', (event) => {
   const target = event.target;
-  if (!target.closest('.popup__wrapper') && !target.closest('.popup_close')) {
+  if (!target.closest('.popup__wrapper') && !target.closest('.popup_close') && !target.classList.contains('iti__country--list')) {
     popup.classList.remove('show');
     document.body.style.overflow = '';
   }
