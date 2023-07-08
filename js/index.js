@@ -78,6 +78,13 @@ btnQuestions.forEach((btn) => {
 // Close Popup
 const popupClose = document.querySelectorAll('.popup_close');
 
+const countrySelects = document.querySelectorAll('.iti__country--list');
+countrySelects.forEach((select) =>
+  select.addEventListener('click', (event) => {
+    event.stopPropagation();
+  }),
+);
+
 popupClose.forEach((button) =>
   button.addEventListener('click', () => {
     popup.classList.remove('show');
@@ -92,13 +99,6 @@ document.addEventListener('click', (event) => {
     document.body.style.overflow = '';
   }
 });
-
-const countrySelects = document.querySelectorAll('.iti__country--list');
-countrySelects.forEach((select) =>
-  select.addEventListener('click', (event) => {
-    event.stopPropagation();
-  }),
-);
 
 // Button to top
 const scrollBtnToTop = document.querySelector('.btn--toTop');
