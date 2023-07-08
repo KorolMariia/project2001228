@@ -385,7 +385,6 @@ a:hover,
     top: auto;
     bottom: 100%;
     border-radius: 1rem;
-
 }
 
 .iti__selected-flag {
@@ -1079,6 +1078,10 @@ a:hover,
 
     .popup__title {
         margin-top: 10rem;
+    }
+
+    .iti__country-list {
+        bottom: 0;
     }
 }
 
