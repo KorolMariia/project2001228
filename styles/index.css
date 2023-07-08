@@ -382,8 +382,10 @@ a:hover,
 }
 
 .iti__country-list {
+    top: auto;
     bottom: 100%;
     border-radius: 1rem;
+
 }
 
 .iti__selected-flag {
